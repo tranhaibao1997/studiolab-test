@@ -1,0 +1,101 @@
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.stepper-container {
+    width: 60%;
+    margin: 0 auto;
+    .stepper {
+        ul {
+            .step {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .step-wrapper {
+                    width: 100%;
+                    ul {
+                        flex-direction: column;
+                        text-align: center;
+                        .step-number {
+                            position: relative;
+                            .line {
+                                display: block;
+                                height: 3px;
+                                position: absolute;
+                                width: 100%;
+                                left: 50%;
+                                background-color: #BBDEFB;
+                                top: 5px
+                            }
+                            .number {
+                                position: relative;
+                                z-index: 2;
+                                border: 2px solid #BBDEFB;
+                                padding: 2px;
+                                border-radius: 50%;
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                margin: 0 auto;
+                                z-index: 10;
+                                position: relative;
+                                background-color: white;
+                            }
+                        }
+                        .step-title {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+            .step:last-child {
+                .step-number {
+                    .line {
+                        display: none !important;
+                    }
+                }
+            }
+            .step:hover {
+                background: rgb(221, 221, 218);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.active {
+    background-color: #2196F3 !important;
+}
+
+.number-active {
+    background-color: #2196F3 !important;
+    color: white !important;
+    border: 2px solid #2196F3 !important;
+}
+
+.text-active {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+    .stepper-list {
+        flex-direction: column;
+    }
+    .line {
+        height: 100px !important;
+        width: 3px !important;
+    }
+    .step-wrapper {
+        ul {
+            flex-direction: row !important;
+            .step-title {
+                margin-top: 5px !important;
+                margin-left: 5px;
+            }
+        }
+    }
+}
