@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Step from '../Step/Step'
 import { useEffect } from 'react';
 export default function Stepper() {
 
