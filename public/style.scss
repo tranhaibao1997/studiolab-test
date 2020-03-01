@@ -29,7 +29,8 @@ ul {
                                 width: 100%;
                                 left: 50%;
                                 background-color: #BBDEFB;
-                                top: 5px
+                                top: 5px;
+                                transition: 0.4s;
                             }
                             .number {
                                 position: relative;
@@ -69,6 +70,7 @@ ul {
 
 .active {
     background-color: #2196F3 !important;
+    transition: 0.4s;
 }
 
 .number-active {
